@@ -14,9 +14,7 @@ export PATH="/opt/homebrew/opt/zip/bin:$PATH"
 export PATH="/opt/homebrew/opt/unzip/bin:$PATH"
 
 __help() {
-
   :
-  # util-linux
   cat >- <<"EOF"
 util-linux is keg-only, which means it was not symlinked into /opt/homebrew,
 because macOS provides the uuid.h header.
@@ -28,20 +26,19 @@ If you need to have util-linux first in your PATH, run:
 For compilers to find util-linux you may need to set:
   export LDFLAGS="-L/opt/homebrew/opt/util-linux/lib"
   export CPPFLAGS="-I/opt/homebrew/opt/util-linux/include"
+==> curl
+curl is keg-only, which means it was not symlinked into /opt/homebrew,
+because macOS already provides this software and installing another version in
+parallel can cause all kinds of trouble.
 
-For pkg-config to find util-linux you may need to set:
-  export PKG_CONFIG_PATH="/opt/homebrew/opt/util-linux/lib/pkgconfig"
+If you need to have curl first in your PATH, run:
+  echo 'export PATH="/opt/homebrew/opt/curl/bin:$PATH"' >> ~/.zshrc
 
-EOF
-
-  # curl
-  cat >- <<"EOF"
 For compilers to find curl you may need to set:
   export LDFLAGS="-L/opt/homebrew/opt/curl/lib"
   export CPPFLAGS="-I/opt/homebrew/opt/curl/include"
-
-For pkg-config to find curl you may need to set:
-  export PKG_CONFIG_PATH="/opt/homebrew/opt/curl/lib/pkgconfig"
-
+==> git
+The Tcl/Tk GUIs (e.g. gitk, git-gui) are now in the `git-gui` formula.
+Subversion interoperability (git-svn) is now in the `git-svn` formula.
 EOF
 }
