@@ -1,5 +1,10 @@
-# shellcheck disable=SC2148
-# shellcheck disable=SC2034,SC2086,SC1091
+# shellcheck disable=all
+{
+    # 自动加载项目/个人环境变量文件，且全部导出
+    set -a
+    [[ -f ~/.env ]] && source ~/.env
+    set +a
+}
 
 {
     ZSH_THEME="bira"
