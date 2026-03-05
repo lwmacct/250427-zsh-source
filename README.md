@@ -4,11 +4,14 @@
 - 在 `~/.zshrc` 添加以下配置, Git 本地路径 `~/.zsh_source`
 
 ```bash
+# shellcheck disable=SC2148,SC1090
+
 for _file in ~/.zsh_source/*.sh; do
-    if [[ -r $_file ]]; then
-        source "$_file"
-    fi
+  if [[ -r $_file ]]; then
+    source "$_file"
+  fi
 done
+
 ```
 
 # Related Links
