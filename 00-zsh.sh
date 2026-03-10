@@ -9,13 +9,14 @@
 {
   ZSH_THEME="bira"
   ZDOTDIR=~/.cache/zsh
-
+  ZSH_COMPDUMP="${ZDOTDIR:-$HOME}/.zcompdump"
   # 在第 73 行
   plugins=(
     git
     zsh-autosuggestions
     zsh-syntax-highlighting
     zsh-completions
+    per-directory-history
   )
 
   export ZSH="$HOME/.oh-my-zsh"
