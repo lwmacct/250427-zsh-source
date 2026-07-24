@@ -4,5 +4,8 @@
       "path": ".",
     },
   ],
-  "settings": {},
+  "settings": {
+    "python.languageServer": "None",
+    "shfmt.executableArgs": ["-i", "2"],
+  },
 }

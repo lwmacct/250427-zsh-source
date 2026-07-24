@@ -13,8 +13,8 @@ export PATH="/opt/homebrew/opt/zip/bin:$PATH"
 export PATH="/opt/homebrew/opt/unzip/bin:$PATH"
 
 __help() {
-  :
-  cat >- <<"EOF"
+	:
+	cat >- <<"EOF"
 util-linux is keg-only, which means it was not symlinked into /opt/homebrew,
 because macOS provides the uuid.h header.
 
